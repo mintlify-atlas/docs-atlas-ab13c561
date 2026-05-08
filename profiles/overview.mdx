@@ -1,0 +1,67 @@
+---
+title: "Manage Minecraft Profiles in TecniLauncher"
+description: "Profiles are isolated Minecraft instances with their own version, loader, mods, and RAM. Learn how to create, edit, and organize profiles in TecniLauncher."
+---
+
+Profiles in TecniLauncher are isolated Minecraft instances, each with its own version, mod loader, mods folder, RAM allocation, and playtime tracking. You can create as many profiles as you need and switch between them from the main screen.
+
+<Tip>
+  Use separate profiles for different modpacks or game versions to avoid conflicts between mods and configurations.
+</Tip>
+
+## Creating a profile
+
+<Steps>
+  <Step title="Open the new profile dialog">
+    Click **New Profile** on the main screen.
+  </Step>
+  <Step title="Enter a profile name">
+    Type a display name for the profile. This name is used for the instance folder and shown in the launcher.
+  </Step>
+  <Step title="Select a Minecraft version">
+    Choose from the list of available release versions. To see snapshot builds, enable **Show snapshots** in Settings.
+  </Step>
+  <Step title="Choose a loader type">
+    Select one of the four loader types: **Vanilla**, **Forge**, **Fabric**, or **NeoForge**. See [Mod loaders](/profiles/loaders) for guidance on which to choose.
+  </Step>
+  <Step title="Set RAM allocation">
+    Use the slider to set the amount of RAM (in GB) allocated to this instance.
+  </Step>
+  <Step title="Create the profile">
+    Click **Create**. TecniLauncher saves the profile and, if needed, installs the selected loader on first launch.
+  </Step>
+</Steps>
+
+<Note>
+  You can choose from 10 preset icons (icon1 through icon10) to visually distinguish your profiles. The icon can be changed later from the edit panel.
+</Note>
+
+## Profile storage
+
+Each profile gets its own isolated folder:
+
+```
+%APPDATA%\.TecniLauncher\Instances\{ProfileName}\
+```
+
+The mods, configuration files, and saves for each profile are stored inside that folder. Shared game files — such as assets and libraries — are stored once in a common location to save disk space:
+
+```
+%APPDATA%\.TecniLauncher\Global\
+```
+
+Profile metadata (name, version, loader, RAM) is saved to:
+
+```
+%APPDATA%\.TecniLauncher\Data\perfiles.json
+```
+
+## Editing and deleting profiles
+
+Click the edit icon next to any profile on the main screen to open the edit panel. From there you can change the profile's name, Minecraft version, loader type, RAM allocation, and icon.
+
+To delete a profile, click the delete icon and confirm the prompt. This removes the profile entry from TecniLauncher but leaves the instance folder on disk, so your world saves and screenshots are preserved.
+
+## Playtime tracking
+
+TecniLauncher automatically records how long you play on each profile. The total playtime is displayed on the profile card in a human-readable format, for example **2h 30m** or **45m**. Playtime starts counting when a game session launches and stops when you close Minecraft.

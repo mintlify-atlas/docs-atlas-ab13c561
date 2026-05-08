@@ -1,0 +1,54 @@
+---
+title: "TecniLauncher Settings and Configuration"
+description: "Manage offline username, window size, snapshot visibility, fullscreen, and language from TecniLauncher's Settings panel or by editing config.json directly."
+---
+
+TecniLauncher stores its configuration in a single JSON file at `%APPDATA%\.TecniLauncher\Data\config.json`. Most settings are accessible through the launcher's **Settings** panel and take effect immediately or on the next game launch.
+
+## Available settings
+
+| Setting | Default | Description |
+|---|---|---|
+| Offline username | `"Jugador"` | Default player name when using offline mode |
+| Show snapshots | Off | Whether snapshot Minecraft versions appear in the version selector |
+| Game window width | 854 px | Minecraft window width on launch |
+| Game window height | 480 px | Minecraft window height on launch |
+| Fullscreen | Off | Launch Minecraft in fullscreen |
+| Language | `es-ES` | UI language (see [Language](/configuration/language)) |
+| TecniStudio mode | Off | Enables TecniStudio account features |
+
+<Note>
+Per-profile RAM allocation is set on the profile itself, not in global settings — see the [Java & Memory](/configuration/java-memory) page.
+</Note>
+
+## Accessing settings
+
+1. Click the **Settings** (gear icon) in TecniLauncher's sidebar or top bar.
+2. Adjust any settings you want to change.
+3. Changes are saved automatically when you close the settings panel.
+
+## config.json file
+
+The configuration file is located at:
+
+```
+%APPDATA%\.TecniLauncher\Data\config.json
+```
+
+Its structure looks like this:
+
+```json
+{
+  "UltimoNombreOffline": "Jugador",
+  "MostrarSnapshots": false,
+  "JuegoAncho": 854,
+  "JuegoAlto": 480,
+  "PantallaCompleta": false,
+  "EsTecniStudio": false,
+  "IdiomaActual": "es-ES"
+}
+```
+
+<Note>
+You can edit this file manually while TecniLauncher is closed. Invalid values are silently ignored and replaced with defaults on the next launch.
+</Note>

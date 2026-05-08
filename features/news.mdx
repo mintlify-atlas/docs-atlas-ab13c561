@@ -1,0 +1,39 @@
+---
+title: "In-Launcher News and Announcements"
+description: "TecniLauncher's home screen displays the latest community news and announcements, loaded automatically each time you open the launcher."
+---
+
+TecniLauncher's home screen displays the latest news and announcements, loaded automatically when you open the launcher. Up to 5 news items are shown at a time, keeping you informed about updates, community events, and other announcements without leaving the launcher.
+
+## What news items include
+
+Each news item can contain the following content:
+
+- **Title** — the headline shown at the top of the card.
+- **Cover image** — a banner image displayed above the body text. Images are resized to 900 px wide for consistent display.
+- **Body text** — the main content of the news item, written in Markdown and rendered with full formatting support (bold, links, lists, etc.).
+- **Action button** (optional) — a clickable button with a custom label and link, used to point you to a related page, announcement, or external resource. The button color can be customized per item (default: indigo).
+
+## News format
+
+News items are defined with the following fields:
+
+| Field | Description |
+|---|---|
+| Title | Headline text displayed on the card |
+| Image | URL of the cover image |
+| Body | Markdown-formatted body text, rendered in the launcher |
+| Show button | Whether the action button is visible |
+| Button label | Text displayed on the action button |
+| Button URL | Link opened when the button is clicked |
+| Button color | Hex color for the button (defaults to `#5865F2`) |
+
+<Note>
+News is fetched from a remote JSON source and cached in memory while the launcher is open. To force a refresh, restart the launcher.
+</Note>
+
+## Events vs. news
+
+News items are informational — they announce updates, share community highlights, or link to external resources. They cannot be played or installed directly.
+
+If you're looking for playable modpack experiences tied to a specific occasion, see [Events](/features/events). Events are self-contained instances with their own Minecraft version, mod loader, and file set.

@@ -1,133 +1,65 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
-icon: 'star'
+title: "TecniLauncher: Modern Minecraft Launcher for Windows"
+description: "TecniLauncher is a free Minecraft launcher for Windows. Microsoft and offline login, Forge/Fabric/NeoForge profiles, and built-in Modrinth mod browsing."
 ---
 
-## Setting up
+TecniLauncher is a free, open-source Minecraft launcher for Windows built for players who want a clean, modern experience. It supports both premium (Microsoft) and offline play, lets you manage multiple profiles with different mod loaders, and puts thousands of mods from Modrinth a single click away.
 
-Get your documentation site up and running in minutes.
-
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
-</Card>
-
-## Make it yours
-
-Design a docs site that looks great and empowers your users.
-
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
+<CardGroup cols={2}>
+  <Card title="Installation" icon="download" href="/installation">
+    Download and install TecniLauncher on your Windows PC in under two minutes.
   </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
+  <Card title="Quickstart" icon="rocket" href="/quickstart">
+    Log in, create your first profile, and launch Minecraft in just a few steps.
   </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
+  <Card title="Authentication" icon="user-shield" href="/authentication/microsoft">
+    Play with your Microsoft account or go offline — your choice.
   </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
+  <Card title="Profiles & Mods" icon="puzzle-piece" href="/profiles/overview">
+    Manage Vanilla, Forge, Fabric, and NeoForge profiles and browse mods.
   </Card>
-</Columns>
+</CardGroup>
 
-## Create beautiful pages
+## What TecniLauncher offers
 
-Everything you need to create world-class documentation.
+<CardGroup cols={2}>
+  <Card title="Microsoft & offline login" icon="key">
+    Authenticate with your premium Microsoft account or play offline without any account required.
+  </Card>
+  <Card title="Multi-loader profiles" icon="layer-group">
+    Create and switch between Vanilla, Forge, Fabric, and NeoForge profiles, each with its own mods folder and RAM allocation.
+  </Card>
+  <Card title="Modrinth mod browser" icon="store">
+    Search and install mods directly from Modrinth without leaving the launcher.
+  </Card>
+  <Card title="Automatic updates" icon="arrow-rotate-right">
+    TecniLauncher checks for updates on launch and installs them silently so you're always on the latest version.
+  </Card>
+  <Card title="In-launcher news" icon="newspaper">
+    Stay informed with news and announcements delivered straight to the launcher's home screen.
+  </Card>
+  <Card title="Discord Rich Presence" icon="discord">
+    Show your friends what version and profile you're playing through Discord's rich presence integration.
+  </Card>
+</CardGroup>
 
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
-  </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
+## Get up and running
 
-## Make your content agent ready
+<Steps>
+  <Step title="Download the installer">
+    Grab the latest `TecniLauncher_Setup.exe` from the [Releases page](https://github.com/Tecnikero/TecniLauncher/releases) and run it.
+  </Step>
+  <Step title="Log in">
+    Choose **Microsoft login** to use your premium account, or select **Offline mode** to play without one.
+  </Step>
+  <Step title="Create a profile">
+    Click **New profile**, pick a Minecraft version and mod loader (Vanilla, Forge, Fabric, or NeoForge), and allocate RAM.
+  </Step>
+  <Step title="Play">
+    Hit **Play** and TecniLauncher handles the rest — downloading game files, applying your loader, and launching Minecraft.
+  </Step>
+</Steps>
 
-Make your docs work for humans and AI agents alike.
-
-<Columns cols={2}>
-  <Card
-    title="Prompt component"
-    icon="robot"
-    href="/agent-ready/prompt"
-  >
-    Embed shareable AI prompts readers can copy or open in Cursor.
-  </Card>
-  <Card
-    title="Visibility"
-    icon="eye"
-    href="/agent-ready/visibility"
-  >
-    Show different content to humans and agents reading your docs.
-  </Card>
-  <Card
-    title="Contextual menu"
-    icon="bolt"
-    href="/agent-ready/contextual"
-  >
-    Give readers one-click access to Claude, ChatGPT, Cursor, and more.
-  </Card>
-  <Card
-    title="AI coding tools"
-    icon="wand-magic-sparkles"
-    href="/ai-tools/claude-code"
-  >
-    Set up Claude Code, Cursor, or Windsurf with Mintlify's skill.
-  </Card>
-</Columns>
-
-## Need inspiration?
-
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+<Note>
+  TecniLauncher runs on Windows only and requires .NET 10 or later (bundled with the installer).
+</Note>

@@ -1,0 +1,80 @@
+---
+title: "Minecraft Mod Loaders: Vanilla, Forge, Fabric, NeoForge"
+description: "Compare the four mod loaders supported by TecniLauncher — Vanilla, Forge, Fabric, and NeoForge — and learn which one to use for your playstyle."
+---
+
+TecniLauncher supports four mod loader types. Each has different mod compatibility and performance characteristics. You select a loader when creating a profile, and it cannot be changed afterward — create a new profile if you need a different loader.
+
+<Tabs>
+  <Tab title="Vanilla">
+    Vanilla runs pure, unmodified Minecraft with no mod loader installed. It is the simplest option and requires no additional setup.
+
+    **Best for:**
+    - Vanilla survival or creative play
+    - Joining servers that do not require mods
+    - Testing vanilla behavior or resource packs
+
+    **Setup:** Select **Vanilla** when creating a profile. No additional installation steps are needed. The game launches using the standard Minecraft runtime.
+  </Tab>
+  <Tab title="Forge">
+    Forge is the longest-established Minecraft modding platform and has the largest mod ecosystem, especially for versions 1.7.10 through 1.20.x. Most large modpacks and tech mods are built for Forge.
+
+    **Best for:**
+    - Large modpacks with many mods
+    - Tech mods (Create, Applied Energistics, Thermal Expansion, etc.)
+    - Versions 1.7.10 through 1.20.x
+
+    **Setup:** Select **Forge** when creating a profile. TecniLauncher installs the Forge runtime automatically on first launch using CmlLib.Core.Installer.Forge. You do not need to download anything manually.
+  </Tab>
+  <Tab title="Fabric">
+    Fabric is a lightweight, modular loader that updates quickly after new Minecraft releases. It is the preferred choice for performance-focused mods and newer Minecraft versions.
+
+    **Best for:**
+    - Performance mods (Sodium, Lithium, Iris)
+    - Newer Minecraft versions where Forge support may lag
+    - Projects that prioritize fast updates
+
+    **Setup:** Select **Fabric** when creating a profile. TecniLauncher downloads the Fabric loader profile automatically from `meta.fabricmc.net`. The installed version identifier follows this format:
+
+    ```
+    fabric-loader-{loaderVersion}-{mcVersion}
+    ```
+
+    For example: `fabric-loader-0.15.11-1.20.1`
+  </Tab>
+  <Tab title="NeoForge">
+    NeoForge is a modern fork of Forge with active development and improved internals. It is designed for Minecraft 1.20.1 and later and maintains broad compatibility with Forge mods.
+
+    **Best for:**
+    - Modern modpacks targeting 1.20.1 and newer
+    - Projects transitioning away from legacy Forge
+    - Mod developers building for the current ecosystem
+
+    **Setup:** Select **NeoForge** when creating a profile. Setup works the same way as Forge — TecniLauncher installs the NeoForge runtime automatically on first launch using CmlLib.Core.Installer.NeoForge.
+  </Tab>
+</Tabs>
+
+## Choosing the right loader
+
+| Use case | Recommended loader |
+|---|---|
+| Mods targeting 1.7.10–1.16.x | Forge |
+| Performance mods (Sodium, Lithium, Iris) | Fabric |
+| Large modpacks on 1.20.1+ | NeoForge or Forge |
+| Pure vanilla — no mods | Vanilla |
+
+<Note>
+  Mods are built for a specific loader. A Forge mod will not load in a Fabric profile, and vice versa. Always check a mod's supported loaders on its Modrinth or CurseForge page before installing.
+</Note>
+
+## Loader version selection
+
+When creating a **Fabric** profile, TecniLauncher queries the Fabric metadata API and presents the available loader versions for your chosen Minecraft version:
+
+```
+https://meta.fabricmc.net/v2/versions/loader/{mcVersion}
+```
+
+You can select a specific version from the list, or leave the default (latest stable) selected.
+
+For **Forge** and **NeoForge** profiles, the latest stable loader version is selected automatically. Manual version selection for Forge and NeoForge is not currently available in the profile creation dialog.

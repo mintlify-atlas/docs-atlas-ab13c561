@@ -1,0 +1,36 @@
+---
+title: "Play Minecraft offline without an account"
+description: "Play singleplayer and LAN worlds in TecniLauncher without a Microsoft account. A consistent UUID is generated from your username so your progress persists."
+---
+
+Offline mode lets you play singleplayer and LAN worlds without a Microsoft account. TecniLauncher generates a consistent offline UUID derived from your chosen username using the same MD5-based algorithm Minecraft uses, so your player identity stays stable across sessions.
+
+<Steps>
+  <Step title="Open the launcher and select offline mode">
+    Launch TecniLauncher and click **Offline Mode** or **Play Offline**.
+  </Step>
+  <Step title="Enter a username">
+    Type any username you want to appear in-game. If you leave the field empty, the launcher uses `Jugador` as the default.
+  </Step>
+  <Step title="Launch the game">
+    Click **Play** to start Minecraft with your offline profile. No account verification is performed.
+  </Step>
+</Steps>
+
+<Warning>
+  Offline mode only works on servers that have `online-mode` disabled. You cannot join servers that require a genuine premium Minecraft account. Skin display is not available in offline mode.
+</Warning>
+
+<Note>
+  Your UUID is deterministic — the same username always produces the same UUID. This means your inventory and progress in singleplayer worlds are preserved across sessions as long as you keep the same username.
+</Note>
+
+<Tip>
+  Use a consistent username every time you play offline. Changing your username changes your UUID, which makes you appear as a new player in existing singleplayer worlds.
+</Tip>
+
+<AccordionGroup>
+  <Accordion title="Can I change my offline username later?">
+    Yes, you can change your offline username at any time. However, because the UUID is derived from the username, a different username produces a different UUID. In an existing singleplayer world, you will appear as a new player and will not have access to your previous inventory or player data.
+  </Accordion>
+</AccordionGroup>

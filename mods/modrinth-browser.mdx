@@ -1,0 +1,72 @@
+---
+title: "Browse and Install Mods from Modrinth"
+description: "Use TecniLauncher's built-in Modrinth mod browser to search, filter, and install mods directly — no need to visit the Modrinth website."
+---
+
+TecniLauncher includes a built-in mod browser powered by the Modrinth API. You can search, filter, and install mods directly from within the launcher without visiting the Modrinth website. Results are automatically filtered to your profile's mod loader and Minecraft version, so you only see compatible mods.
+
+<Note>
+  The mod browser is available for profiles that use **Fabric**, **Forge**, or **NeoForge**. It is not available for Vanilla profiles. Open a modded profile and click the **Mods** tab to access the browser.
+</Note>
+
+## Searching for mods
+
+<Steps>
+  <Step title="Select a modded profile">
+    On the main screen, click the profile you want to add mods to. Make sure it uses Fabric, Forge, or NeoForge.
+  </Step>
+  <Step title="Open the Mods tab">
+    Click the **Mods** tab inside the profile view.
+  </Step>
+  <Step title="Search by name">
+    Type a mod name or keyword into the search bar. Results update as you type.
+  </Step>
+  <Step title="Browse the results">
+    Each result card shows the mod name, author, and a short description. Scroll through the list or use pagination to see more results.
+  </Step>
+</Steps>
+
+Search results are filtered automatically using your profile's loader and Minecraft version as facets. When you search by keyword, results are sorted by relevance. When browsing without a search term, results are sorted by total downloads. Each page shows up to 30 mods.
+
+## Installing a mod
+
+<Steps>
+  <Step title="Click a mod">
+    Select any mod from the search results to open its detail view.
+  </Step>
+  <Step title="Select a version">
+    Choose the version you want to install. Versions are labeled by release type:
+    - **Release** — shown in green; stable and recommended for most players
+    - **Beta** — shown in yellow; may contain bugs
+    - **Alpha** — shown in red; early builds, likely unstable
+  </Step>
+  <Step title="Download the mod">
+    Click **Download**. TecniLauncher downloads the `.jar` file and saves it directly to your profile's mods folder:
+
+    ```
+    %APPDATA%\.TecniLauncher\Instances\{ProfileName}\mods\
+    ```
+
+    The mod is available the next time you launch that profile.
+  </Step>
+</Steps>
+
+<Tip>
+  Stick to **release** versions for stable gameplay. Beta and alpha versions may have bugs that affect performance or break your world.
+</Tip>
+
+## Managing installed mods
+
+Installed mods are marked in the browser so you can see at a glance what you already have. The launcher tracks installation status locally per profile.
+
+To remove a mod, navigate to the profile's mods folder and delete the corresponding `.jar` file:
+
+```
+%APPDATA%\.TecniLauncher\Instances\{ProfileName}\mods\
+```
+
+You can open this folder directly from File Explorer. After deleting the file, the mod will no longer load when you launch that profile.
+
+<Note>
+  Recommended mods for an event or modpack may be pre-installed automatically when you join an event. See the Events page for details.
+</Note>

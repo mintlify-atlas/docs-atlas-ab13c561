@@ -1,0 +1,86 @@
+{
+  "projectType": "saas",
+  "projectName": "TecniLauncher",
+  "projectDescription": "A modern Minecraft launcher for Windows with Microsoft and offline authentication, multi-loader profile management, Modrinth mod browsing, and automatic updates.",
+  "theme": "almond",
+  "primaryColor": "#5865F2",
+  "lightColor": null,
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "installation",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Authentication",
+            "pages": [
+              "authentication/microsoft",
+              "authentication/offline",
+              "authentication/tecnistudio"
+            ]
+          },
+          {
+            "group": "Profiles & Mods",
+            "pages": [
+              "profiles/overview",
+              "profiles/loaders",
+              "mods/modrinth-browser"
+            ]
+          },
+          {
+            "group": "Features",
+            "pages": [
+              "features/news",
+              "features/events",
+              "features/discord-rpc",
+              "features/auto-update"
+            ]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "configuration/settings",
+              "configuration/language",
+              "configuration/java-memory"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Microsoft (Premium) and offline authentication via CmlLib",
+    "TecniStudio custom account system backed by Supabase",
+    "Profile management for Vanilla, Forge, Fabric, and NeoForge",
+    "Modrinth mod browser with search, filtering, and one-click install",
+    "In-launcher news feed from remote JSON",
+    "Special events / modpack system with versioned file manifests",
+    "Automatic launcher self-update via zip download and batch script",
+    "Discord Rich Presence integration",
+    "Multi-language support (Spanish, English, Brazilian Portuguese)",
+    "Player skin display for premium and TecniStudio accounts"
+  ],
+  "publicApiSurface": [
+    "Core.Inicializar() — bootstraps data paths, profiles, and secrets",
+    "Core.IntentarAutoLogin() — silent Microsoft session restore",
+    "AuthService.LoginMicrosoftAsync(rutaCacheSesion) — interactive Microsoft login",
+    "AuthService.CrearSesionOffline(nombre) — create offline session",
+    "AuthService.LoginTecniStudioAsync(email, password) — TecniStudio login via Supabase",
+    "ModrinthAPI.BuscarMods(busqueda, loader, version) — search mods on Modrinth",
+    "ModrinthAPI.ObtenerListaVersiones(projectId, versionMC, loader) — list mod versions",
+    "FabricInstaller.InstallAsync(mcVersion, loaderVersionEspecifica) — install Fabric loader",
+    "UpdateService.ObtenerDatosUpdateAsync() — fetch latest launcher version info",
+    "UpdateService.InstalarDesdeZipAsync(urlDescarga, progreso) — self-update the launcher",
+    "NewsService.ObtenerNoticiasAsync(forzarRecarga) — fetch news articles",
+    "EventosManager.CargarTodosLosEventos(urlIndiceEventos) — load event/modpack list",
+    "SkinUtils.ObtenerSkinOnline(usuario, esPremium) — retrieve player skin"
+  ]
+}

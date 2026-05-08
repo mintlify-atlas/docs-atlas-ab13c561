@@ -1,0 +1,43 @@
+---
+title: "Allocating RAM and Java Memory to Profiles"
+description: "Configure per-profile RAM allocation in TecniLauncher, from vanilla Minecraft to heavy modpacks, with automatic Java runtime management."
+---
+
+TecniLauncher allocates RAM to Minecraft on a per-profile basis. Each profile has its own memory setting so you can give more RAM to heavy modpacks and less to lightweight setups. Java is managed automatically — you do not need to install Java separately.
+
+## Setting RAM for a profile
+
+When creating or editing a profile, use the RAM slider to set the allocation. The value is stored internally in the profile's `MemoriaRam` field as megabytes (for example, 4 GB = 4096 MB).
+
+Each profile displays its allocation in the launcher — for example: `Fabric 0.15.11 • 4 GB RAM`.
+
+<Note>
+Events may have a minimum RAM requirement. The launcher enforces this minimum — your allocation cannot go below the event's required amount.
+</Note>
+
+## Recommended RAM
+
+| Setup | Recommended RAM |
+|---|---|
+| Vanilla (no mods) | 2 GB |
+| Small modpack (< 30 mods) | 4 GB |
+| Large modpack (> 100 mods) | 6–8 GB |
+| Heavy event/modpack | 8–16 GB (check event minimum) |
+
+<Tip>
+Do not over-allocate RAM. Leaving at least 2–3 GB free for Windows and other applications avoids lag. For most setups, 4–6 GB is the sweet spot.
+</Tip>
+
+<Warning>
+Allocating more RAM than your system has available will cause crashes. Check your total system RAM in **Windows Settings** before setting values above 8 GB.
+</Warning>
+
+## Performance mode
+
+Each profile has a **Performance mode** toggle. When enabled, TecniLauncher applies additional JVM launch flags — primarily garbage collection tuning — to improve Minecraft's runtime performance. This is useful for modpacks that experience frequent stuttering or frame drops.
+
+## Java management
+
+TecniLauncher uses CmlLib.Core to manage the Java runtime. The correct Java version is downloaded and used automatically based on the Minecraft version you are launching.
+
+You do not need to install Java manually or configure `JAVA_HOME`.

@@ -1,0 +1,49 @@
+---
+title: "Automatic updates for TecniLauncher"
+description: "TecniLauncher checks for updates on every startup and installs new versions automatically in the background, with no manual reinstall required."
+---
+
+TecniLauncher checks for updates automatically each time it starts. When a new version is available, it notifies you with a changelog and downloads the update in the background — no manual reinstall needed.
+
+## How updates work
+
+On startup, TecniLauncher fetches version information from a remote JSON endpoint and compares it to the currently installed version.
+
+- If a newer version is found, a notification appears showing the **changelog** — a summary of what changed in the new release.
+- **Critical updates** prompt immediate installation and cannot be deferred. These are released when a fix is urgent or the current version has a significant issue.
+- **Non-critical updates** give you the choice to install now or continue with the current version and update later.
+
+## Update process
+
+<Steps>
+  <Step title="Update detected">
+    TecniLauncher detects a new version on startup and displays the changelog. Click **Update** to begin.
+  </Step>
+  <Step title="Download">
+    TecniLauncher downloads a `.zip` package containing the new files. Progress is shown as the download runs ("Downloading update package...").
+  </Step>
+  <Step title="Extraction">
+    The downloaded package is extracted to a temporary folder ("Extracting files...").
+  </Step>
+  <Step title="Installation">
+    TecniLauncher prepares the installation ("Preparing installation..."), then closes. A script replaces the old launcher files with the new ones.
+  </Step>
+  <Step title="Restart">
+    TecniLauncher restarts automatically with the updated version installed.
+  </Step>
+</Steps>
+
+## What updates preserve
+
+The update process only replaces TecniLauncher's application files. Your personal data is never modified:
+
+- **Profiles, settings, and session data** are stored in `%APPDATA%\.TecniLauncher\Data\` and are untouched by updates.
+- **Minecraft game files** in `%APPDATA%\.TecniLauncher\Global\` are also preserved.
+
+<Note>
+During the update, TecniLauncher closes briefly. This is expected — it restarts automatically once the update files are in place.
+</Note>
+
+<Tip>
+Keep TecniLauncher updated to get the latest bug fixes, performance improvements, and new features.
+</Tip>

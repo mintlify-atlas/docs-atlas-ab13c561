@@ -1,0 +1,49 @@
+---
+title: "Install TecniLauncher on Windows"
+description: "Download the TecniLauncher installer from GitHub Releases, run the setup wizard, and have the launcher ready to use in under two minutes."
+---
+
+TecniLauncher is distributed as a Windows installer available on GitHub Releases. The setup wizard installs the launcher, and on first launch TecniLauncher automatically creates its data directory and downloads any required components.
+
+<Steps>
+  <Step title="Download the installer">
+    Go to the [TecniLauncher Releases page](https://github.com/Tecnikero/TecniLauncher/releases) and download the latest installer. The file is named `TecniLauncher_Setup_v1.3.0.exe` for the current release.
+  </Step>
+  <Step title="Run the installer">
+    Double-click `TecniLauncher_Setup_v1.3.0.exe` to start the setup wizard.
+
+    <Warning>
+      Windows SmartScreen may display a warning because TecniLauncher is an open-source application not yet widely known to Microsoft's systems. To proceed, click **More info** and then **Run anyway**. The installer is safe — you can verify it against the official [GitHub Releases page](https://github.com/Tecnikero/TecniLauncher/releases).
+    </Warning>
+  </Step>
+  <Step title="Follow the setup wizard">
+    The installer will ask you to choose an installation directory. The default is your **Program Files** folder, but you can select any location you prefer. Click **Install** to complete setup.
+  </Step>
+  <Step title="Launch TecniLauncher">
+    Once installation finishes, click **Finish** (or open TecniLauncher from your Start menu or desktop shortcut). On first launch, TecniLauncher automatically creates its data directory and sets up the folder structure it needs.
+  </Step>
+</Steps>
+
+## Data directory
+
+TecniLauncher stores your configuration, profiles, and Minecraft files separately from the application install. These folders are created automatically the first time you run the launcher:
+
+| Folder | Path | Contents |
+|---|---|---|
+| **Data** | `%APPDATA%\.TecniLauncher\Data\` | `config.json`, `perfiles.json`, session files |
+| **Global** | `%APPDATA%\.TecniLauncher\Global\` | Shared Minecraft assets and libraries |
+| **Instances** | `%APPDATA%\.TecniLauncher\Instances\{profileName}\` | Per-profile game files and mods |
+
+<Note>
+  Uninstalling TecniLauncher does not remove the `%APPDATA%\.TecniLauncher\` directory. Your profiles, saves, and configuration are preserved unless you delete them manually.
+</Note>
+
+## System requirements
+
+| Requirement | Minimum | Recommended |
+|---|---|---|
+| **Operating system** | Windows 10 (64-bit) | Windows 11 |
+| **RAM** | 4 GB | 8 GB or more |
+| **Internet connection** | Required | Broadband |
+
+Java is handled automatically by TecniLauncher — no separate installation is needed.

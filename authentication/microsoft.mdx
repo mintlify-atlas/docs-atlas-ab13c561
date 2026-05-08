@@ -1,0 +1,33 @@
+---
+title: "Sign in with Microsoft to play Minecraft"
+description: "Use your Microsoft account to access your licensed Minecraft: Java Edition profile in TecniLauncher, with skin display and online-mode server support."
+---
+
+Microsoft login connects TecniLauncher to your licensed Minecraft: Java Edition account. Once signed in, your username and skin are displayed in the launcher, and you can join servers that require a genuine (online-mode) account.
+
+<Steps>
+  <Step title="Open the launcher and click Microsoft Login">
+    Launch TecniLauncher and click **Microsoft Login** (also labeled **Sign in with Microsoft** on some screens).
+  </Step>
+  <Step title="Sign in with your Microsoft account">
+    A browser window opens to Microsoft's sign-in page. Enter the credentials for the Microsoft account linked to your Minecraft purchase.
+  </Step>
+  <Step title="Authorize TecniLauncher">
+    Follow the prompts to authorize the launcher. TecniLauncher uses [CmlLib](https://github.com/CmlLib/CmlLib.Core), an open-source authentication library. Your password is never stored by the launcher.
+  </Step>
+  <Step title="Confirm your profile">
+    Once authorized, your Minecraft username and skin appear in the launcher. Your skin is fetched from [Minotar](https://minotar.net).
+  </Step>
+</Steps>
+
+<Note>
+  Your session token is saved locally at `%APPDATA%\.TecniLauncher\Data\tcl_session.json`. This means you won't need to sign in again on the next launch — TecniLauncher attempts silent re-authentication automatically at startup.
+</Note>
+
+## Signing out
+
+Click your profile avatar or account name in the launcher, then select **Sign out**. This deletes the saved session file at `%APPDATA%\.TecniLauncher\Data\tcl_session.json`.
+
+## Requirements
+
+You must have a valid **Minecraft: Java Edition** license tied to the Microsoft account you sign in with. If your account does not own Minecraft, authentication will succeed but the game will not launch.

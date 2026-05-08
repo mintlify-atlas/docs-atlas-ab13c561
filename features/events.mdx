@@ -1,0 +1,65 @@
+---
+title: "Play special events and modpacks"
+description: "Join curated community modpack experiences from TecniLauncher. Events are self-contained with a fixed Minecraft version, mod loader, and verified file set."
+---
+
+TecniLauncher's Events feature lets you join special community events and curated modpack experiences directly from the launcher. Events are self-contained instances with their own Minecraft version, mod loader, and pre-configured file set — no manual setup required.
+
+## How events work
+
+Events are loaded from a remote index of JSON definitions. When you open the **Events** tab, TecniLauncher fetches the current list and displays all available events.
+
+Each event specifies:
+
+- **Name** — the display name shown in the event card.
+- **Minecraft version** — the exact version of Minecraft the event runs on.
+- **Loader** — the mod loader used (for example, Fabric) and its version.
+- **Minimum RAM** — the minimum memory required to run the event.
+- **Icon and background image** — visuals shown in the event card.
+- **Discord invite link** — a link to the event's community server.
+- **File list** — all mods, configs, and resources that make up the event modpack.
+
+Files are downloaded with SHA1 integrity verification. If any file is corrupted or missing, it is re-downloaded automatically before launch.
+
+Events are installed to:
+
+```
+%APPDATA%\.TecniLauncher\GameData\Eventos\{eventId}\
+```
+
+## Joining an event
+
+<Steps>
+  <Step title="Open the Events tab">
+    Launch TecniLauncher and click the **Events** tab in the main navigation.
+  </Step>
+  <Step title="Browse available events">
+    Each event card shows the name, version, Minecraft version, and mod loader. Review the details to find the event you want to join.
+  </Step>
+  <Step title="Adjust RAM if needed">
+    Use the RAM selector to choose how much memory to allocate. Available options are 2, 4, 6, 8, 10, 12, 16, 24, and 32 GB.
+  </Step>
+  <Step title="Click Play">
+    Click **Play**. TecniLauncher checks for missing or outdated files, downloads anything needed, and launches the game.
+  </Step>
+</Steps>
+
+## RAM recommendations
+
+Each event defines a minimum RAM requirement. TecniLauncher enforces this minimum — if your current setting is below the required amount, it is automatically adjusted before launch.
+
+As a general guideline:
+
+- **4 GB** is sufficient for lightweight events with a small mod list.
+- **6–8 GB** is recommended for most modpacks.
+- **10 GB or more** may be needed for events with large or complex mod lists.
+
+Check the event card or the event's Discord server for specific recommendations.
+
+<Note>
+Events are separate from regular profiles. They do not appear in your profile list and are installed to their own folder under `%APPDATA%\.TecniLauncher\GameData\Eventos\`.
+</Note>
+
+<Tip>
+Join the event's Discord server using the link on the event card to connect with other players, get support, and stay up to date on event news.
+</Tip>
